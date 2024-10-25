@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The Movie Recommendation System is a responsive web application designed to help users discover trending movies and web series across various streaming platforms. Utilizing the TMDB API, this application provides real-time recommendations, allowing users to explore the latest content available on popular platforms such as Netflix, Amazon Prime, Hulu, Disney+, Apple TV+, Peacock, Paramount+, Starz, and HBO.
+The Movie Recommendation System is a responsive web application designed to help users discover trending movies and web series across various streaming platforms. Utilizing the TMDB API, this application provides real-time recommendations, allowing users to explore the latest content available on popular platforms such as Netflix, Amazon Prime, Hulu, Disney+, Apple TV+, Peacock, Paramount+, Starz.
 
 ## Features
 
