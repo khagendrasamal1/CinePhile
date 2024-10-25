@@ -1,0 +1,377 @@
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+  height: 650px; /* Adjust the height as needed */
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.overlay h1 {
+  font-size: 140px; /* Adjust font size as needed */
+  margin: 0;
+}
+
+.overlay p {
+  margin-top: -40px; /* Add 'px' unit */
+  font-size: 20px;
+}
+
+/* Centered Main Heading Styling */
+.main-heading {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Centered Dropdown Container */
+.dropdown-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Dropdown Genre Selector Styling */
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Carousel Container Styling */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+  margin: 0 auto;
+  width: 100%;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for all browsers */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Carousel Item Styling */
+.carousel-item {
+  min-width: 200px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect for Carousel Items */
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+
+/* Movie Poster Styling */
+.carousel-item img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Movie Title Styling */
+.carousel-item h3 {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* Search Container Styling */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+#movieSearch {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  width: 300px; /* Adjust width as needed */
+  position: relative;
+}
+
+/* Search Results Styling */
+.search-results {
+  position: absolute;
+  top: 100%; /* Position it below the search input */
+  left: 0; /* Align it to the left of the search input */
+  background-color: rgb(4, 4, 4); /* Background color for dropdown */
+  border: 1px solid #ccc; /* Border for dropdown */
+  z-index: 1000; /* Ensure it appears above other elements */
+  width: 100%; /* Match the width of the search input */
+  max-height: 200px; /* Limit height for overflow */
+  overflow-y: auto; /* Scroll if too many items */
+  display: none; /* Initially hidden */
+}
+
+/* Individual Result Styling */
+.result-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Recommend Button Styling */
+#recommendBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d1ab13eb;
+  color: #000;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Recommendation Section Styling */
+.recommendations {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Recommended Movie Poster */
+.recommendation-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column; /* Change to vertical alignment */
+  align-items: center; /* Center align the content */
+  justify-content: start;
+  transition: transform 0.2s; /* Add transition for hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.recommendation-item:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.recommendation-item img {
+  width: 380px; /* Increased poster size */
+  height: auto; /* Increased height */
+  margin-bottom: 10px; /* Margin below the poster */
+}
+
+.recommendation-item h3 {
+  margin-bottom: 10px;
+  text-align: justify; /* Justify the heading */
+}
+
+.recommendation-details {
+  display: flex;
+  flex-direction: column; /* Stack details vertically */
+  align-items: center; /* Center align details */
+  text-align: justify; /* Justify text in details */
+}
+
+.recommendation-details p {
+  margin: 5px 0;
+}
+
+/* Divider between movies */
+.recommendation-divider {
+  height: 2px;
+  background-color: #e0e0e0;
+  margin: 20px 0;
+}
+
+/* Styles for the suggestion dropdown */
+.suggestions {
+  position: absolute; /* Position the suggestions dropdown absolutely */
+  top: 100%; /* Position it below the search input */
+  left: 0; /* Align it to the left of the search input */
+  background-color: white; /* Background color for dropdown */
+  border: 1px solid #ccc; /* Border for dropdown */
+  z-index: 1000; /* Ensure it appears above other elements */
+  width: 100%; /* Match the width of the search input */
+  max-height: 200px; /* Limit height for overflow */
+  overflow-y: auto; /* Scroll if too many items */
+  display: none; /* Initially hidden */
+}
+
+/* Show suggestions when applicable */
+.suggestions.show {
+  display: block; /* Show dropdown when necessary */
+}
+
+/* Styles for each suggestion item */
+.suggestion-item {
+  padding: 8px; /* Padding for each suggestion */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+.trending-section {
+  margin: 20px;
+}
+
+.posters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.poster {
+  width: 150px;
+  height: 225px;
+  background-size: cover;
+  background-position: center;
+}
+
+#trendingMoviesSection {
+  margin-top: 20px;
+}
+
+#platformSelect {
+  margin-bottom: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  header {
+      height: 500px;
+  }
+
+  .overlay h1 {
+      font-size: 100px;
+  }
+  .overlay p {
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+      height: 400px;
+  }
+
+  .overlay h1 {
+      font-size: 80px;
+  }
+  .overlay p {
+      font-size: 16px;
+  }
+
+  .carousel-item {
+      min-width: 150px;
+      margin-right: 10px;
+  }
+  
+  select {
+      font-size: 14px;
+      padding: 8px;
+  }
+  
+  #movieSearch {
+      width: 80%; /* Full width on smaller screens */
+  }
+
+  .recommendation-item img {
+      width: 100px; /* Smaller images on small screens */
+  }
+
+  .recommendation-item h3 {
+      font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .suggestions {
+      max-height: 150px; /* Reduce dropdown height */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+      height: 250px;
+  }
+
+  .overlay h1 {
+      font-size: 50px;
+  }
+  .overlay p {
+      font-size: 15px;
+  }
+
+  .carousel-item {
+      min-width: 120px;
+      margin-right: 5px;
+  }
+  
+  #movieSearch {
+      width: 90%; /* More padding on smaller screens */
+  }
+
+  .recommendation-item img {
+      width: 80px; /* Smaller images on small screens */
+  }
+
+  .container {
+      padding: 10px; /* Reduce padding on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay h1 {
+      font-size: 40px;
+  }
+  .overlay p {
+      font-size: 14px;
+  }
+
+  .carousel-item {
+      min-width: 100px;
+  }
+
+  .recommendation-item img {
+      width: 60px; /* Smaller images on very small screens */
+  }
+
+  .suggestions {
+      max-height: 100px; /* Reduce dropdown height further */
+  }
+}
