@@ -21,7 +21,7 @@ The Movie Recommendation System is a responsive web application designed to help
 
 ## Deployment
 
-You can access the deployed version of the Movie Recommendation System at the following link: [Live Demo](YOUR_DEPLOYMENT_LINK_HERE)
+You can access the deployed version of the Movie Recommendation System at the following link: [Live Demo](https://khagendrasamal1.github.io/CinePhile/)
 
 ## Installation
 
