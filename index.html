@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CinePhile</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=vCqKYAL1bdmU&format=png&color=000000" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <video autoplay muted loop>
+          <source src="Directed by Christopher Nolan.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+          <h1>CinePhile</h1>
+        </div>
+      </header>
+
+  <main>
+
+    <!-- Centered Heading -->
+    <h2 class="main-heading">Top Movies by Genre</h2>
+    
+    <!-- Centered Container for Dropdown -->
+    <div class="dropdown-container">
+        <select id="genreSelect">
+            <option value="28">Action</option>
+            <option value="53">Thriller</option>
+            <option value="18">Drama</option>
+            <option value="35">Comedy</option>
+            <option value="10749">Romance</option>
+            <option value="14">Fantasy</option>
+            <option value="27">Horror</option>
+            <option value="16">Animation</option>
+        </select>
+    </div>
+    
+    <!-- Carousel Container -->
+    <div class="carousel"></div>
+
+
+    <!-- Centered Heading -->
+    <h2 class="main-heading">Get Movie Recommendations</h2>
+
+    <!-- Search Bar for Recommendations -->
+    <div class="search-container">
+        <input type="text" id="movieSearch" placeholder="Search for a movie...">
+        <div class="search-results"></div>
+        <button id="recommendBtn" style="display:none;">🍿Recommend🍿</button>
+    </div>
+
+    <!-- Recommendations Section -->
+    <div class="recommendations"></div>
+
+
+    <!-- Trending Movies Section -->
+<section id="trendingMoviesSection">
+  <h2 class="main-heading">Trending Movies Across Streaming Platforms</h2>
+  <select id="platformSelect">
+      <option value="netflix">Netflix</option>
+      <option value="amazon-prime">Amazon Prime</option>
+      <option value="hulu">Hulu</option>
+      <option value="disney-plus">Disney+</option>
+      <option value="apple-tv">Apple TV+</option>
+      <option value="peacock">Peacock</option>
+      <option value="paramount">Paramount+</option>
+      <option value="starz">Starz</option>
+  </select>
+  <div class="carousel" id="trendingCarousel"></div>
+</section>
+
+
+<section id="trendingWebSeries">
+  <h2 class="main-heading">Trending Web Series Across Streaming Platforms</h2>
+  <select id="webSeriesPlatformSelect">
+      <option value="netflix">Netflix</option>
+      <option value="amazon-prime">Amazon Prime</option>
+      <option value="hulu">Hulu</option>
+      <option value="disney-plus">Disney+</option>
+      <option value="apple-tv">Apple TV+</option>
+      <option value="peacock">Peacock</option>
+      <option value="paramount">Paramount+</option>
+      <option value="starz">Starz</option>
+  </select>
+  <div class="carousel" id="trendingWebSeriesCarousel"></div>
+</section>
+
+
+  </main>
+</body>
+<script src="script.js"></script>
+
+<footer>
+</footer>
+</html>
